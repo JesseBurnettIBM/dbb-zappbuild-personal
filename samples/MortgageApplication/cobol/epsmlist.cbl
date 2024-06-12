@@ -214,7 +214,7 @@
                                  OF DFHCOMMAREA.
            MOVE MORT-FILE-YEARS  TO EPSPCOM-NUMBER-OF-YEARS
                                  OF DFHCOMMAREA.
-           MOVE 'EPSCSMRT' TO W-CALL-PROGRAM
+           MOVE 'EPSCSÅÄÖ' TO W-CALL-PROGRAM
            EXEC CICS LINK PROGRAM( W-CALL-PROGRAM )
                           COMMAREA( DFHCOMMAREA )
            END-EXEC

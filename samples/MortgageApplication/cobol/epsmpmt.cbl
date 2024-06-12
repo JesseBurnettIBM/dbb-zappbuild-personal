@@ -76,9 +76,9 @@
       *
        LINKAGE SECTION.
       *
-       COPY EPSPDATA.
+       COPY EPSPDÅÄÖ.
 
-       PROCEDURE DIVISION USING EPSPDATA.
+       PROCEDURE DIVISION USING EPSPDÅÄÖ.
       *
        A000-MAINLINE.
            MOVE 0 TO VALIDATION-INDICATOR.
@@ -94,9 +94,9 @@
            .
       *
        A100-VALIDATE-INPUT.
-           MOVE SPACES TO EPSPDATA-RETURN-ERROR.
-           IF EPSPDATA-PRINCIPLE-DATA > 0
-              IF EPSPDATA-PRINCIPLE-DATA > STATIC-MAXIMUM-PRINCIPLE
+           MOVE SPACES TO EPSPDÅÄÖ-RETURN-ERROR.
+           IF EPSPDÅÄÖ-PRINCIPLE-DATA > 0
+              IF EPSPDÅÄÖ-PRINCIPLE-DATA > STATIC-MAXIMUM-PRINCIPLE
                  MOVE 2 TO VALIDATION-INDICATOR
               END-IF
            ELSE
@@ -104,42 +104,42 @@
            END-IF
            .
            IF VALIDATION-INDICATOR = 0
-              IF EPSPDATA-QUOTED-INTEREST-RATE <= 0
+              IF EPSPDÅÄÖ-QUOTED-INTEREST-RATE <= 0
                  MOVE 3 TO VALIDATION-INDICATOR
               ELSE
-                 IF EPSPDATA-YEAR-MONTH-IND = 'Y'
+                 IF EPSPDÅÄÖ-YEAR-MONTH-IND = 'Y'
                     COMPUTE WS-NUMBER-OF-MONTHS =
-                               EPSPDATA-NUMBER-OF-YEARS * 12
+                               EPSPDÅÄÖ-NUMBER-OF-YEARS * 12
                  ELSE
-                    MOVE EPSPDATA-NUMBER-OF-MONTHS TO
+                    MOVE EPSPDÅÄÖ-NUMBER-OF-MONTHS TO
                             WS-NUMBER-OF-MONTHS
                  END-IF
               END-IF
            END-IF
            .
            COMPUTE WS-CALC-INTEREST =
-                              (EPSPDATA-QUOTED-INTEREST-RATE / 100) / 12
+                              (EPSPDÅÄÖ-QUOTED-INTEREST-RATE / 100) / 12
            .
 
        A200-CALULATE-MONTH-PAYMENT.
-           COMPUTE EPSPDATA-RETURN-MONTH-PAYMENT
-                   = EPSPDATA-PRINCIPLE-DATA *
+           COMPUTE EPSPDÅÄÖ-RETURN-MONTH-PAYMENT
+                   = EPSPDÅÄÖ-PRINCIPLE-DATA *
                      (WS-CALC-INTEREST *
                      (1 + WS-CALC-INTEREST) ** WS-NUMBER-OF-MONTHS) /
                      (((1 + WS-CALC-INTEREST )
                                             ** WS-NUMBER-OF-MONTHS) - 1)
            .
-      *     DISPLAY 'RETURN PAYMENT = ' EPSPDATA-RETURN-MONTH-PAYMENT.
+      *     DISPLAY 'RETURN PAYMENT = ' EPSPDÅÄÖ-RETURN-MONTH-PAYMENT.
       *     COMPUTE C = WS-CALC-INTEREST.
       *     COMPUTE N = WS-NUMBER-OF-MONTHS.
-      *     COMPUTE L = EPSPDATA-PRINCIPLE-DATA.
+      *     COMPUTE L = EPSPDÅÄÖ-PRINCIPLE-DATA.
       *     COMPUTE P = L * (C * (1 + C ) ** N)/(((1 + C) ** N) - 1).
 
 
       * DEAD CODE USED FOR TESTING
        A300-TRY2.
-           MOVE EPSPDATA-PRINCIPLE-DATA TO Loan.
-           COMPUTE Interest = EPSPDATA-QUOTED-INTEREST-RATE / 100.
+           MOVE EPSPDÅÄÖ-PRINCIPLE-DATA TO Loan.
+           COMPUTE Interest = EPSPDÅÄÖ-QUOTED-INTEREST-RATE / 100.
            MOVE WS-NUMBER-OF-MONTHS TO Number-Periods.
            Compute Payment =
            Loan * Function Annuity((Interest / 12) Number-Periods)
@@ -147,7 +147,7 @@
 
        A999-RETURN-ERROR-TEXT.
            MOVE ERROR-TEXT(VALIDATION-INDICATOR) TO
-                                                 EPSPDATA-RETURN-ERROR
+                                                 EPSPDÅÄÖ-RETURN-ERROR
            GOBACK
            .
 

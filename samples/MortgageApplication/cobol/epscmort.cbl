@@ -217,7 +217,7 @@
        A600-CALCULATE-MORTGAGE.
            MOVE 'Y' TO EPSPCOM-YEAR-MONTH-IND
                            OF W-COMMUNICATION-AREA.
-           MOVE 'EPSCSMRT' TO W-CALL-PROGRAM
+           MOVE 'EPSCSÅÄÖ' TO W-CALL-PROGRAM
            EXEC CICS LINK PROGRAM( W-CALL-PROGRAM )
                           COMMAREA( W-COMMUNICATION-AREA )
            END-EXEC

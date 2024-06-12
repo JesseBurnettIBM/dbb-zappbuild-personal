@@ -3184,7 +3184,7 @@
        2 PIC X(48) USAGE DISPLAY
            VALUE '<SOAP-ENV:Body><DFHCOMMAREA xmlns="http://www.EP'.
        2 PIC X(40) USAGE DISPLAY
-           VALUE 'SCSMRTO.com/schemas/EPSCSMRTOInterface">'.
+           VALUE 'SCSMRTO.com/schemas/EPSCSÅÄÖOInterface">'.
        1 X0000000A.
        2 PIC 9(4) COMP VALUE 25.
        2 PIC X(25) USAGE DISPLAY
