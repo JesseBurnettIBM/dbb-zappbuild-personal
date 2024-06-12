@@ -15,7 +15,7 @@ resourceDefinitions:
     dynamic: NO
     executionset: FULLAPI
 - program:
-    name: EPSCSÅÄÖ
+    name: EPSCZÅÄÖ
     group: EPSMTM
     datalocation: ANY
     language: COBOL
