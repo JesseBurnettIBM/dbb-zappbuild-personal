@@ -1,0 +1,41 @@
+
+** Build start at 20240613.143025.618
+**************** Initialization of the build process ****************
+** Running zAppBuild Version 3.8.0-BASE 
+** Build output located at /u/burnett/output/zapp/build.20240613.143025.618
+** Build result created for BuildGroup:MortgageApplication-national-characters BuildLabel:build.20240613.143025.618
+** Loading DBB scanner mapping configuration dbb.scannerMapping
+************* Creation and processing of the build list *************
+** --fullBuild option selected. Building all programs for application MortgageApplication
+** Writing build list file to /u/burnett/output/zapp/build.20240613.143025.618/buildList.txt
+** Scanning source code.
+** Loading file level properties overrides.
+** Invoking build scripts according to build order: BMS.groovy,Cobol.groovy,LinkEdit.groovy
+** Building 2 files mapped to BMS.groovy script
+*** (1/2) Building file MortgageApplication/bms/epsmlis.bms
+*** (2/2) Building file MortgageApplication/bms/epsmort.bms
+** Building 6 files mapped to Cobol.groovy script
+*** (1/6) Building file MortgageApplication/cobol/epsnbrvl.cbl
+*** (2/6) Building file MortgageApplication/cobol/epscmort.cbl
+*** (3/6) Building file MortgageApplication/cobol/epscsmrd.cbl
+*** (4/6) Building file MortgageApplication/cobol/epscz≈ƒ÷.cbl
+*! The compile return code (12) for MortgageApplication/cobol/epscz≈ƒ÷.cbl exceeded the maximum return code allowed (4)
+*** (5/6) Building file MortgageApplication/cobol/epsmlist.cbl
+*** (6/6) Building file MortgageApplication/cobol/epsmpmt.cbl
+*! The compile return code (12) for MortgageApplication/cobol/epsmpmt.cbl exceeded the maximum return code allowed (4)
+** Building 1 file mapped to LinkEdit.groovy script
+*** (1/1) Building file MortgageApplication/link/epsmlist.lnk
+***************** Finalization of the build process *****************
+** Writing build report data to /u/burnett/output/zapp/build.20240613.143025.618/BuildReport.json
+** Writing build report to /u/burnett/output/zapp/build.20240613.143025.618/BuildReport.html
+** Updating build result BuildGroup:MortgageApplication-national-characters BuildLabel:build.20240613.143025.618
+** Build ended at Thu Jun 13 14:30:35 EDT 2024
+** Build State : ERROR
+** Total files processed : 9
+** Summary of error messages
+   *! The compile return code (12) for MortgageApplication/cobol/epscz≈ƒ÷.cbl exceeded the maximum return code allowed (4)
+   *! The compile return code (12) for MortgageApplication/cobol/epsmpmt.cbl exceeded the maximum return code allowed (4)
+
+** Total build time  : 9.908 seconds
+
+** Build finished
